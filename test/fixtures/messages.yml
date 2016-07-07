@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sender_first_name: MyString
+  sender_last_name: MyString
+  recipient_first_name: MyString
+  recipient_last_name: MyString
+  recipient_email: MyString
+
+two:
+  sender_first_name: MyString
+  sender_last_name: MyString
+  recipient_first_name: MyString
+  recipient_last_name: MyString
+  recipient_email: MyString

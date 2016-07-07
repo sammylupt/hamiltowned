@@ -1,0 +1,11 @@
+<div class="main-page">
+  <%= link_to root_path do %>
+    <%= image_tag "hamiltowned.png", class: "logo" %>
+  <% end %>
+  <div class="input-box">
+    <div class="inside-container">
+      <p>Thanks for your submission</p>
+      <p><%= @message.recipient_first_name %> will receive an email today around 4:15pm EST.</p>
+    </div>
+  </div>
+</div>

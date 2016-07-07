@@ -1,0 +1,18 @@
+<div class="main-page">
+  <%= link_to root_path do %>
+    <%= image_tag "hamiltowned.png", class: "logo" %>
+  <% end %>
+
+  <div class="input-box">
+    <div class="inside-container">
+      <p>Send your friends a fake Hamilton lottery winner email. They'll receive an email around 4:15pm EST -- a few minutes before the real lottery emails go out.</p>
+      <% if !in_lottery_sign_up_period? %>
+        <%= render 'form', message: @message %>
+      <% else %>
+        <div>
+          Just like the real Hamilton lottery, this one is open from 9am to 4pm EST. Come back again tomorrow!
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

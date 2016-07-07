@@ -1,0 +1,23 @@
+<%= form_for(message) do |f| %>
+  <div class="field">
+    <%= f.text_field :recipient_first_name, placeholder: "Your friend's first name" %>
+  </div>
+
+  <div class="field">
+    <% if message.errors[:recipient_email].any? %>
+      <div class="form-date-error">
+        <%= message.errors[:recipient_email].first %>
+      </div>
+    <% end %>
+
+    <%= f.text_field :recipient_email, placeholder: "Your friend's email address" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :sender_first_name, placeholder: "Your first name" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>

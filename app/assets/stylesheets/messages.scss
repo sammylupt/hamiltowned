@@ -1,0 +1,106 @@
+$gold: #907431;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "LaGiocondaTTBold", Helvetica, Verdana, Arial;
+}
+
+.main-page {
+  background: image-url("background.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-bottom: 3em;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 90%;
+  height: 400px;
+}
+
+.input-box {
+  width: 90%;
+  margin: 1em auto 0;
+  background-color: black;
+  color: white;
+  padding: .5em;
+
+  p {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .inside-container {
+    background: #131313;
+    border: 6px solid #1e1e1e;
+    margin: auto;
+    width: 90%;
+    text-align: center;
+  }
+
+  .input-box {
+    width: 80%;
+    padding: .5em 2em;  
+  }
+}
+
+.field {
+  margin-bottom: 1em;
+}
+
+label {
+  font-size: .75em;
+  color: #B6C1C5;
+  display: block;
+}
+
+input {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border: 1px solid $gold;
+  width: 230px;
+  padding: 10px 0 11px;
+  font-size: 14px;
+  outline: 0;
+}
+
+input[type="submit"] {
+  width: inherit;
+  text-transform: uppercase;
+  color: $gold;
+  padding: 5px;
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder {
+  color: #c0c0c0;
+}
+
+.form-date-error {
+  margin-bottom: 1em;
+  color: red 
+}
+.field_with_errors input {
+  border: 2px solid red;
+}
+
+.crying {
+  display: block;
+  margin: 2em auto;
+}
+
+.hamiltowned {
+  font-size: 3em;
+  text-align: center;
+  text-transform: uppercase;
+}
