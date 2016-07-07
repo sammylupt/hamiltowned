@@ -7,9 +7,7 @@
                       <tr>
                           <td align="center">
                               <h1 style="margin-bottom:0;padding-bottom:0">
-                                  <a href="https://lottery.broadwaydirect.com" style="font-family:Helvetica,Arial" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://lottery.broadwaydirect.com&amp;source=gmail&amp;ust=1467890549839000&amp;usg=AFQjCNGgTBI58bIIXz6xd5skYB3PGBBsUQ">
-                                    <img src="https://ci6.googleusercontent.com/proxy/jj5xmJKRFtd3kNadEtCth3W9Wxs_7apBy18t2YAt4Sq0_nuprjleOafTKsPnKGqYrklDSzAfqdpk4wL-mvtloAHRXX8nX-cLUcZkEPSPHfqzmQ4j83ZwJYmhQ4OL5PNVhpFE8k9WGLFSPr5gd7yxkG9w=s0-d-e1-ft#https://lottery.broadwaydirect.com/wp-content/uploads/2015/10/broadway-direct-email-logo.png" alt="Broadway Direct Lottery" border="0" class="CToWUd">
-                                  </a>
+                                  <img src="https://ci6.googleusercontent.com/proxy/jj5xmJKRFtd3kNadEtCth3W9Wxs_7apBy18t2YAt4Sq0_nuprjleOafTKsPnKGqYrklDSzAfqdpk4wL-mvtloAHRXX8nX-cLUcZkEPSPHfqzmQ4j83ZwJYmhQ4OL5PNVhpFE8k9WGLFSPr5gd7yxkG9w=s0-d-e1-ft#https://lottery.broadwaydirect.com/wp-content/uploads/2015/10/broadway-direct-email-logo.png" alt="Broadway Direct Lottery" border="0" class="CToWUd">
                               </h1>
                           </td>
                       </tr>
@@ -29,22 +27,21 @@
                       </p>
                       <p>Dear <%= @recipient %>-</p>
                       <p>Congratulations! You have been selected as a winner of the Official Digital Lottery.</p>
+                      <p>Here are the details:</p>
+                      <p><span style="font-weight: bold">HAMILTON</span></p>
                       <p>
-                      Here are the details:</p>
-                      <span style="font-weight: bold">HAMILTON</span>
-                      <br/>
-                      <%= link_to @formatted_date, crying_jordan_path(@message), style: "color:#6291F6", target: "_blank" %>
-                      </br>
-                      2 ticket(s) at $10 per ticket</br>
-                      <span style="color:#E51613;font-weight:bold">Balance due: $20.00</span> 
+                        <%= link_to @formatted_date, crying_jordan_url(@message), style: "color:#6291F6", target: "_blank" %>
                       </p>
+                      <p>2 ticket(s) at $10 per ticket</p>
+                      <p>
+                      <span style="color:#E51613;font-weight:bold">Balance due: $20.00</p>
                       <p>
                         Here's what happens next:</br>
                         <br>
                         You have 60 minutes to pay for your tickets online. Major credit cards are accepted. <span style="font-weight:bold">If you do not pay for your tickets within 60 minutes, they will be released.</span>
                         </br></br>
                         Click below to pay for your tickets:
-                        <%= link_to crying_jordan_path(@message), style: "color: white; text-decoration:none; display:block", target: '_blank' do %>
+                        <%= link_to crying_jordan_url(@message), style: "color: white; text-decoration:none; display:block", target: '_blank' do %>
                           <div style="background-color:#1664C6;color:white;text-align:center;cursor:pointer;padding:12px;font-size:14px;text-transform:uppercase">
                           Click to pay now
                           </div>

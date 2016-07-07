@@ -8,5 +8,5 @@ class ApplicationController < ActionController::Base
       username == 'admin' && password == 'password'
     end
   end
-end
+end  
  

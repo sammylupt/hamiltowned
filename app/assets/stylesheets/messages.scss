@@ -1,12 +1,17 @@
-$gold: #907431;
+$gold: #CF9942;
+$error: red;
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "LaGiocondaTTBold", Helvetica, Verdana, Arial;
+@font-face {
+  font-family: "LaGiocondaTTBold";
+  src:font-url('LaGiocondaSCTTBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.main-page {
+body.covered-background {
+  margin: 0;
+  padding: 0;
+  font-family: "LaGiocondaTTBold", serif;
   background: image-url("background.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -15,47 +20,46 @@ body {
   padding-bottom: 3em;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto;
+img {
+  max-width: 100%
+}
+
+.logo-container {
+  margin: 1em auto 0;
+  text-align: center;
   max-width: 90%;
+}
+
+.logo {
   height: 400px;
 }
 
-.input-box {
+.wrapper {
   width: 90%;
-  margin: 1em auto 0;
+  margin: 1em auto;
   background-color: black;
   color: white;
-  padding: .5em;
-
-  p {
-    text-align: center;
-  }
-}
-
-@media (min-width: 768px) {
-  .inside-container {
-    background: #131313;
-    border: 6px solid #1e1e1e;
-    margin: auto;
-    width: 90%;
-    text-align: center;
-  }
-
-  .input-box {
-    width: 80%;
-    padding: .5em 2em;  
-  }
+  padding: 1em;
+  text-align: center;
 }
 
 .field {
   margin-bottom: 1em;
 }
 
+.attribution {
+  margin-top: 4em;
+  font-size: .6em;
+  color: white;
+
+  a {
+    color: white;
+  }
+}
+
 label {
   font-size: .75em;
-  color: #B6C1C5;
+  color: $gold;
   display: block;
 }
 
@@ -67,16 +71,22 @@ input {
   border: 1px solid $gold;
   width: 230px;
   padding: 10px 0 11px;
-  font-size: 14px;
+  font-size: 12px;
   outline: 0;
 }
 
-input[type="submit"] {
+.submit-button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: block;
+  margin: 0 auto;
   width: inherit;
   text-transform: uppercase;
   color: $gold;
   padding: 5px;
   cursor: pointer;
+  font-family: "LaGiocondaTTBold", serif;
 }
 
 ::-webkit-input-placeholder,
@@ -86,12 +96,14 @@ input[type="submit"] {
   color: #c0c0c0;
 }
 
-.form-date-error {
-  margin-bottom: 1em;
-  color: red 
-}
+// class name dynamic from form_for
 .field_with_errors input {
-  border: 2px solid red;
+  border: 2px solid $error;
+}
+
+.field_with_errors__error {
+  margin-bottom: 1em;
+  color: $error;
 }
 
 .crying {
@@ -99,8 +111,32 @@ input[type="submit"] {
   margin: 2em auto;
 }
 
-.hamiltowned {
+.you-got-hamiltowned {
+  font-family: "Helvetica", "Arial", sans-serif;
   font-size: 3em;
   text-align: center;
   text-transform: uppercase;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .wrapper-with-border {
+    background: #131313;
+    border: 6px solid #1e1e1e;
+    margin: auto;
+    padding: 1em 0;
+    width: 90%;
+    text-align: center;
+  }
+
+  .wrapper {
+    width: 80%;
+    padding: .5em 2em;
+  }
+
+  .content-container {
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+  }
 }

@@ -1,5 +1,5 @@
 namespace :send_emails do
-  task :lottery do
+  task lottery: :environment do
     Message.needs_sending.each do |message|
       begin
         MessageMailer.lottery(@message).deliver

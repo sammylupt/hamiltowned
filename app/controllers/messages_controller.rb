@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-  before_action :set_message, only: [:show, :crying_jordan, :email]
+  before_action :set_message, only: [:show, :crying_jordan]
 
   def show
     is_today = @message.date_to_send == Date.today
@@ -26,14 +26,10 @@ class MessagesController < ApplicationController
   def crying_jordan
   end
 
-  def email
-    @recipient = @message.recipient_first_name
-    @formatted_date = @message.date_to_send.strftime("%B %-d, %Y 8:00pm")
-  end
-
-  def testing
+  def send_test_email
     @message = Message.find(1)
     MessageMailer.lottery(@message).deliver
+    render nothing: true
   end
 
   private

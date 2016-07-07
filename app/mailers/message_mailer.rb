@@ -12,7 +12,7 @@ class MessageMailer < ApplicationMailer
       subject: subject
     )
 
-    # message.update(sent: true)
+    message.update(sent: true)
   end
 end
 
