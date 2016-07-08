@@ -24,7 +24,7 @@ def send_emails
 
   Message.needs_sending.each do |message|
     begin
-      MessageMailer.lottery(@message).deliver
+      MessageMailer.lottery(message).deliver
     rescue
       puts "Error sending message number #{message.id}"
     end
