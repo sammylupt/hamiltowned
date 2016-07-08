@@ -1,5 +1,6 @@
 class MessagesController < ApplicationController
   before_action :set_message, only: [:show, :crying_jordan]
+  before_filter :ensure_auth, only: [:send_test_email]
 
   def show
     is_today = @message.date_to_send == Date.today
@@ -30,6 +31,12 @@ class MessagesController < ApplicationController
     @message = Message.find(1)
     MessageMailer.lottery(@message).deliver
     render nothing: true
+  end
+
+  def ensure_auth
+    authenticate_or_request_with_http_basic('Administration') do |u, p|
+      u == ENV['ADMIN_NAME'] && p == ENV['ADMIN_PASS']
+    end
   end
 
   private

@@ -12,7 +12,7 @@
   <div class="wrapper-with-border">
     <div class="content-container">
       <p>Send your friends a fake Hamilton lottery winner email. They'll receive an email around 4:15pm EST -- a few minutes before the real lottery emails go out.</p>
-      <% if !in_lottery_sign_up_period? %>
+      <% if in_lottery_sign_up_period? %>
         <%= render 'form', message: @message %>
       <% else %>
         <div>
